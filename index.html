@@ -1,123 +1,93 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>ChainView</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChainView | Smart Money Tracker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header class="app-header">
-
     <div class="logo-container">
-
         <div class="logo-icon"></div> 
-
         <h1>ChainView</h1>
-
     </div>
-
     <p class="tagline">Institutional Flow & Smart Money Tracker</p>
-
 </header>
 
-
 <main>
-
-    <div id="inputSection" class="card">
-
-        <label for="walletAddress" style="font-size: 0.8rem; color: #aaa; margin-bottom: 5px; display: block;">Wallet Address</label>
-
-        <input type="text" id="walletAddress" placeholder="0x... or Wallet Name">
-
+    <div id="inputSection" class="card main-search">
+        <label for="walletAddress" class="input-label">Wallet Address</label>
+        <input type="text" id="walletAddress" placeholder="0x... or ENS Name">
+        
         <div class="network-container">
-
-            <label for="chainSelect">Select Network</label>
-
+            <label for="chainSelect">Network</label>
             <select id="chainSelect">
-
-                <option value="eth">All chains</option>
-
-                
-
+                <option value="eth">Ethereum (Mainnet)</option>
+                <option value="bsc">BNB Chain</option>
+                <option value="polygon">Polygon</option>
             </select>
-
         </div>
-
+        
         <button id="checkWallet">Check Wallet</button>
-
-        <button id="exportCSV" style="background: rgba(255,255,255,0.1); margin-top: 10px;">Export CSV</button>
-
+        <button id="exportCSV" class="btn-secondary">Export CSV Report</button>
     </div>
-<div id="homeView" class="empty-state-container">
-    <div class="market-grid">
-        <div class="market-card">
-            <span class="coin-name">Ethereum</span>
-            <span id="ethPrice" class="coin-price">Loading...</span>
+
+    <div id="home" class="tabContent active">
+        <div class="card portfolio-summary">
+            <p class="summary-label">Estimated Net Worth</p>
+            <h2 id="totalBalance">$0.00</h2>
+            <div id="priceChange" class="price-change">--</div>
         </div>
-        <div class="market-card">
-            <span class="coin-name">Binance</span>
-            <span id="bnbPrice" class="coin-price">Loading...</span>
+
+        <div class="market-grid">
+            <div class="market-card">
+                <span class="coin-name">Ethereum</span>
+                <span id="ethPrice" class="coin-price">...</span>
+            </div>
+            <div class="market-card">
+                <span class="coin-name">Binance</span>
+                <span id="bnbPrice" class="coin-price">...</span>
+            </div>
+            <div class="market-card">
+                <span class="coin-name">Polygon</span>
+                <span id="maticPrice" class="coin-price">...</span>
+            </div>
         </div>
-        <div class="market-card">
-            <span class="coin-name">Polygon</span>
-            <span id="maticPrice" class="coin-price">Loading...</span>
-        </div>
+        <p class="welcome-text">Enter an address to track institutional moves.</p>
     </div>
-    <p class="welcome-text">Enter a wallet address above to reveal the Smart Money flow.</p>
-</div>
-
-
 
     <div id="tokens" class="tabContent">
-
         <div class="card">
-
             <h2>Token Holdings</h2>
-
             <ul id="tokenList" class="list-style"></ul>
-
         </div>
-
     </div>
 
     <div id="nfts" class="tabContent">
-
         <div class="card">
-
             <h2>NFT Gallery</h2>
-
             <div id="nftGallery" class="nft-grid"></div>
-
         </div>
-
     </div>
 
     <div id="activity" class="tabContent">
-
         <div class="card">
-
             <h2>Recent Transactions</h2>
-
             <ul id="txList" class="list-style"></ul>
-
         </div>
-
     </div>
-
 </main>
 
-<div class="tabs">
-
+<nav class="tabs">
     <button class="tabButton active" data-tab="home">Home</button>
-
     <button class="tabButton" data-tab="tokens">Tokens</button>
-
     <button class="tabButton" data-tab="nfts">NFTs</button>
-
     <button class="tabButton" data-tab="activity">Activity</button>
-
-</div>
+</nav>
 
 <script src="script.js"></script>
+
 </body>
 </html>
