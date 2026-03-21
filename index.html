@@ -1,0 +1,107 @@
+<header class="app-header">
+
+    <div class="logo-container">
+
+        <div class="logo-icon"></div> 
+
+        <h1>ChainView</h1>
+
+    </div>
+
+    <p class="tagline">Institutional Flow & Smart Money Tracker</p>
+
+</header>
+
+
+<main>
+
+    <div id="inputSection" class="card">
+
+        <label for="walletAddress" style="font-size: 0.8rem; color: #aaa; margin-bottom: 5px; display: block;">Wallet Address</label>
+
+        <input type="text" id="walletAddress" placeholder="0x... or Wallet Name">
+
+        <div class="network-container">
+
+            <label for="chainSelect">Select Network</label>
+
+            <select id="chainSelect">
+
+                <option value="eth">All chains</option>
+
+                
+
+            </select>
+
+        </div>
+
+        <button id="checkWallet">Check Wallet</button>
+
+        <button id="exportCSV" style="background: rgba(255,255,255,0.1); margin-top: 10px;">Export CSV</button>
+
+    </div>
+
+    <div id="home" class="tabContent active">
+
+        <div class="card">
+
+            <h2>Total Portfolio Value</h2>
+
+            <p id="totalBalance">$0.00</p>
+
+            <p id="priceChange" style="font-size: 0.9rem; margin-top: 5px;"></p>
+
+        </div>
+
+    </div>
+
+    <div id="tokens" class="tabContent">
+
+        <div class="card">
+
+            <h2>Token Holdings</h2>
+
+            <ul id="tokenList" class="list-style"></ul>
+
+        </div>
+
+    </div>
+
+    <div id="nfts" class="tabContent">
+
+        <div class="card">
+
+            <h2>NFT Gallery</h2>
+
+            <div id="nftGallery" class="nft-grid"></div>
+
+        </div>
+
+    </div>
+
+    <div id="activity" class="tabContent">
+
+        <div class="card">
+
+            <h2>Recent Transactions</h2>
+
+            <ul id="txList" class="list-style"></ul>
+
+        </div>
+
+    </div>
+
+</main>
+
+<div class="tabs">
+
+    <button class="tabButton active" data-tab="home">Home</button>
+
+    <button class="tabButton" data-tab="tokens">Tokens</button>
+
+    <button class="tabButton" data-tab="nfts">NFTs</button>
+
+    <button class="tabButton" data-tab="activity">Activity</button>
+
+</div>
+
