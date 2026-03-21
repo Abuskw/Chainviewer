@@ -48,20 +48,25 @@
         <button id="exportCSV" style="background: rgba(255,255,255,0.1); margin-top: 10px;">Export CSV</button>
 
     </div>
-
-    <div id="home" class="tabContent active">
-
-        <div class="card">
-
-            <h2>Total Portfolio Value</h2>
-
-            <p id="totalBalance">$0.00</p>
-
-            <p id="priceChange" style="font-size: 0.9rem; margin-top: 5px;"></p>
-
+<div id="homeView" class="empty-state-container">
+    <div class="market-grid">
+        <div class="market-card">
+            <span class="coin-name">Ethereum</span>
+            <span id="ethPrice" class="coin-price">Loading...</span>
         </div>
-
+        <div class="market-card">
+            <span class="coin-name">Binance</span>
+            <span id="bnbPrice" class="coin-price">Loading...</span>
+        </div>
+        <div class="market-card">
+            <span class="coin-name">Polygon</span>
+            <span id="maticPrice" class="coin-price">Loading...</span>
+        </div>
     </div>
+    <p class="welcome-text">Enter a wallet address above to reveal the Smart Money flow.</p>
+</div>
+
+
 
     <div id="tokens" class="tabContent">
 
