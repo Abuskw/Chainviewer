@@ -273,4 +273,16 @@ if (exportCSVBtn) {
     });
 
 }
+async function loadMarketPulse() {
+    const eth = await getPriceData('eth');
+    const bsc = await getPriceData('bsc');
+    const poly = await getPriceData('polygon');
+
+    document.getElementById('ethPrice').textContent = `$${eth.usd.toLocaleString()}`;
+    document.getElementById('bnbPrice').textContent = `$${bsc.usd.toLocaleString()}`;
+    document.getElementById('maticPrice').textContent = `$${poly.usd.toLocaleString()}`;
+}
+
+// Call this at the very bottom of your script
+loadMarketPulse();
 
