@@ -1,0 +1,411 @@
+/* Update Body for background depth */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+    background: radial-gradient(circle at top left, #1a1a2e, #121212);
+    background-attachment: fixed;
+    color: #ffffff;
+    min-height: 100vh;
+}
+
+/* The Glass Card Effect */
+.card {
+    background: rgba(255, 255, 255, 0.05); /* Very transparent white */
+    backdrop-filter: blur(12px); /* The "Glass" blur */
+    -webkit-backdrop-filter: blur(12px); 
+    border: 1px solid rgba(255, 255, 255, 0.1); /* Subtle white border */
+    margin: 1rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+
+/* Input Fields - Glass Style */
+#walletAddress {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: white;
+    outline: none;
+}
+
+#walletAddress:focus {
+    background: rgba(255, 255, 255, 0.12);
+    border: 1px solid #4CAF50;
+}
+
+/* Glass Tabs Navigation */
+.tabs {
+    position: fixed; /* Stick to bottom like a mobile app */
+    bottom: 0;
+    width: 100%;
+    background: rgba(30, 30, 30, 0.6);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    display: flex;
+    justify-content: space-around;
+    padding: 10px 0;
+    z-index: 100;
+}
+
+.tabButton {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.tabButton.active {
+    color: #4CAF50;
+    background: rgba(76, 175, 80, 0.1);
+    border-radius: 12px;
+}
+
+/* List Items - Hover effect */
+ul li {
+    padding: 1rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    transition: background 0.2s;
+}
+
+ul li:hover {
+    background: rgba(255, 255, 255, 0.03);
+}
+
+/* Improved NFT Gallery Scrollbar */
+.nftGallery::-webkit-scrollbar {
+    height: 6px;
+}
+.nftGallery::-webkit-scrollbar-thumb {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+}
+/* Hide all tab contents by default */
+
+.tabContent {
+
+    display: none; 
+
+    opacity: 0;
+
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+/* Only show the one with the .active class */
+
+.tabContent.active {
+
+    display: block;
+
+    opacity: 1;
+
+}
+/* --- PRIMARY ACTION BUTTON (The "Institutional" Look) --- */
+
+#checkWallet {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 10px;
+
+    /* SMC Institutional Green Gradient */
+
+    background: linear-gradient(135deg, #4CAF50 0%, #2E7D32 100%);
+
+    color: white;
+
+    font-weight: 800;
+
+    font-size: 1rem;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1.5px;
+
+    border: none;
+
+    border-radius: 14px;
+
+    cursor: pointer;
+
+    transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+    box-shadow: 0 4px 20px rgba(76, 175, 80, 0.4);
+
+    position: relative;
+
+    overflow: hidden;
+
+}
+
+#checkWallet:hover {
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 25px rgba(76, 175, 80, 0.6);
+
+    filter: brightness(1.1);
+
+}
+
+#checkWallet:active {
+
+    transform: translateY(-1px);
+
+    box-shadow: 0 4px 10px rgba(76, 175, 80, 0.3);
+
+}
+
+/* Secondary Button (Ghost/Glass Style for Export) */
+
+#exportCSV {
+
+    width: 100%;
+
+    background: rgba(255, 255, 255, 0.05);
+
+    backdrop-filter: blur(5px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    margin-top: 12px;
+
+    padding: 10px;
+
+    border-radius: 12px;
+
+    color: #b0b0b0;
+
+    font-size: 0.9rem;
+
+    font-weight: 600;
+
+    transition: 0.2s;
+
+}
+
+#exportCSV:hover {
+
+    background: rgba(255, 255, 255, 0.1);
+
+    color: #ffffff;
+
+    border-color: rgba(255, 255, 255, 0.3);
+
+}
+
+/* --- ADDING DATA POP --- */
+
+#totalBalance {
+
+    font-size: 2.5rem;
+
+    font-weight: 800;
+
+    background: linear-gradient(to bottom, #ffffff, #4CAF50);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    margin: 10px 0;
+
+    letter-spacing: -1px;
+
+}
+/* Container for the label and select */
+
+.network-container {
+
+    margin-bottom: 1.5rem;
+
+    text-align: left;
+
+}
+
+.network-container label {
+
+    display: block;
+
+    font-size: 0.8rem;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    margin-bottom: 8px;
+
+    margin-left: 5px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 1px;
+
+}
+
+/* The actual Select Dropdown */
+
+#chainSelect {
+
+    width: 100%;
+
+    padding: 12px;
+
+    background: rgba(255, 255, 255, 0.07);
+
+    backdrop-filter: blur(10px);
+
+    -webkit-backdrop-filter: blur(10px);
+
+    border: 1px solid rgba(255, 255, 255, 0.1);
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 1rem;
+
+    cursor: pointer;
+
+    outline: none;
+
+    appearance: none; /* Removes default browser arrow */
+
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+
+    background-repeat: no-repeat;
+
+    background-position: right 12px center;
+
+    background-size: 16px;
+
+    transition: all 0.3s ease;
+
+}
+
+#chainSelect:hover {
+
+    background-color: rgba(255, 255, 255, 0.12);
+
+    border-color: rgba(76, 175, 80, 0.5); /* Subtle green glow */
+
+    box-shadow: 0 0 15px rgba(76, 175, 80, 0.1);
+
+}
+
+#chainSelect:focus {
+
+    border-color: #4CAF50;
+
+    box-shadow: 0 0 20px rgba(76, 175, 80, 0.2);
+
+}
+
+/* Styling the options inside (Limited support in some browsers) */
+
+#chainSelect option {
+
+    background-color: #1a1a2e; /* Dark background so text is readable */
+
+    color: white;
+
+    padding: 10px;
+
+}
+
+.app-header {
+
+    text-align: center;
+
+    padding: 30px 10px;
+
+    margin-bottom: 20px;
+
+}
+
+.logo-container {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 12px;
+
+}
+
+.app-header h1 {
+
+    font-size: 2.5rem;
+
+    font-weight: 800;
+
+    margin: 0;
+
+    /* This creates the premium "Silver/White" gradient */
+
+    background: linear-gradient(135deg, #ffffff 0%, #aab2ff 100%);
+
+    -webkit-background-clip: text;
+
+    -webkit-text-fill-color: transparent;
+
+    text-shadow: 0 10px 20px rgba(0,0,0,0.2);
+
+    letter-spacing: -1px;
+
+}
+
+.tagline {
+
+    font-size: 0.9rem;
+
+    color: rgba(255, 255, 255, 0.6);
+
+    margin-top: 8px;
+
+    text-transform: uppercase;
+
+    letter-spacing: 2px;
+
+    font-weight: 300;
+
+}
+
+/* Optional: A small "Pulse" icon next to the name */
+
+.logo-icon {
+
+    width: 12px;
+
+    height: 12px;
+
+    background: #4caf50;
+
+    border-radius: 50%;
+
+    box-shadow: 0 0 15px #4caf50;
+
+    animation: pulse 2s infinite;
+
+}
+
+@keyframes pulse {
+
+    0% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0.7); }
+
+    70% { transform: scale(1); box-shadow: 0 0 0 10px rgba(76, 175, 80, 0); }
+
+    100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
+
+}
+
+
