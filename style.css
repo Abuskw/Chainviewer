@@ -407,5 +407,42 @@ ul li:hover {
     100% { transform: scale(0.95); box-shadow: 0 0 0 0 rgba(76, 175, 80, 0); }
 
 }
+.market-grid {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.market-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    padding: 15px;
+    border-radius: 16px;
+    width: 100px;
+    text-align: center;
+}
+
+.coin-name {
+    display: block;
+    font-size: 0.7rem;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+}
+
+.coin-price {
+    display: block;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #ffffff;
+    margin-top: 5px;
+}
+
+.welcome-text {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+    margin-top: 20px;
+}
 
 
