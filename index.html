@@ -1,93 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ChainView | Smart Money Tracker</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<div style="text-align:center; font-family:sans-serif; padding:40px;">
+  <h1>📡 Connection Lost</h1>
+  <p>Shekewa Med is trying to reconnect...</p>
 
-<header class="app-header">
-    <div class="logo-container">
-        <div class="logo-icon"></div> 
-        <h1>ChainView</h1>
-    </div>
-    <p class="tagline">Institutional Flow & Smart Money Tracker</p>
-</header>
+  <div style="margin:20px auto; width:50px; height:50px; border:5px solid #ccc; border-top:5px solid #4CAF50; border-radius:50%; animation:spin 1s linear infinite;"></div>
 
-<main>
-    <div id="inputSection" class="card main-search">
-        <label for="walletAddress" class="input-label">Wallet Address</label>
-        <input type="text" id="walletAddress" placeholder="0x... or ENS Name">
-        
-        <div class="network-container">
-            <label for="chainSelect">Network</label>
-            <select id="chainSelect">
-                <option value="eth">Ethereum (Mainnet)</option>
-                <option value="bsc">BNB Chain</option>
-                <option value="polygon">Polygon</option>
-            </select>
-        </div>
-        
-        <button id="checkWallet">Check Wallet</button>
-        <button id="exportCSV" class="btn-secondary">Export CSV Report</button>
-    </div>
-
-    <div id="home" class="tabContent active">
-        <div class="card portfolio-summary">
-            <p class="summary-label">Estimated Net Worth</p>
-            <h2 id="totalBalance">$0.00</h2>
-            <div id="priceChange" class="price-change">--</div>
-        </div>
-
-        <div class="market-grid">
-            <div class="market-card">
-                <span class="coin-name">Ethereum</span>
-                <span id="ethPrice" class="coin-price">...</span>
-            </div>
-            <div class="market-card">
-                <span class="coin-name">Binance</span>
-                <span id="bnbPrice" class="coin-price">...</span>
-            </div>
-            <div class="market-card">
-                <span class="coin-name">Polygon</span>
-                <span id="maticPrice" class="coin-price">...</span>
-            </div>
-        </div>
-        <p class="welcome-text">Enter an address to track institutional moves.</p>
-    </div>
-
-    <div id="tokens" class="tabContent">
-        <div class="card">
-            <h2>Token Holdings</h2>
-            <ul id="tokenList" class="list-style"></ul>
-        </div>
-    </div>
-
-    <div id="nfts" class="tabContent">
-        <div class="card">
-            <h2>NFT Gallery</h2>
-            <div id="nftGallery" class="nft-grid"></div>
-        </div>
-    </div>
-
-    <div id="activity" class="tabContent">
-        <div class="card">
-            <h2>Recent Transactions</h2>
-            <ul id="txList" class="list-style"></ul>
-        </div>
-    </div>
-</main>
-
-<nav class="tabs">
-    <button class="tabButton active" data-tab="home">Home</button>
-    <button class="tabButton" data-tab="tokens">Tokens</button>
-    <button class="tabButton" data-tab="nfts">NFTs</button>
-    <button class="tabButton" data-tab="activity">Activity</button>
-</nav>
-
-<script src="script.js"></script>
-
-</body>
-</html>
+  <button onclick="location.reload()" style="padding:10px 20px; background:#4CAF50; color:white; border:none; border-radius:8px;">
+    Retry
+  </button>
+</div>
